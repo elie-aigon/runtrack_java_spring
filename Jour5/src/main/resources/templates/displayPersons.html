@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Personnes</title>
+</head>
+<body>
+<h1>Liste des Personnes</h1>
+<p th:text="${confirmMessage}"></p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="Person : ${persons}">
+        <td th:text="${Person.getId()}">ID</td>
+        <td th:text="${Person.getName()}">Name</td>
+        <td th:text="${Person.getAge()}">Age</td>
+    </tr>
+</table>
+</body>
+</html>
