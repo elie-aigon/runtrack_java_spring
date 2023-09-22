@@ -16,6 +16,7 @@ public class PersonController {
     @Autowired
     private PersonService PersonService;
 
+
     @PostMapping("deletePerson")
     public String deletePerson(@RequestParam int id, Model model){
         PersonService.deleteById(id);
